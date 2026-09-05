@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  failureforge-demo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: failureforge-demo
+    environment:
+      - DEMO_MODE=true
+      - PYTHONPATH=/app/backend
+    volumes:
+      - ./data:/app/data
+
+  failureforge-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: failureforge-api
+    ports:
+      - "8000:8000"
+    command: uvicorn failureforge.main:app --host 0.0.0.0 --port 8000
+    environment:
+      - DEMO_MODE=true
+      - PYTHONPATH=/app/backend

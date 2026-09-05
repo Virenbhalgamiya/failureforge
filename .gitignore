@@ -1,0 +1,28 @@
+# Secrets and Environment Variables
+.env
+*.env
+
+# SQLite Database Files
+*.db
+*.sqlite
+*.sqlite3
+failureforge.db
+
+# Python Bytecode & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Pytest / Coverage / Virtual Environment
+.pytest_cache/
+.coverage
+htmlcov/
+venv/
+.venv/
+env/
+
+# IDE & System Files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
