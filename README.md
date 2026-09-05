@@ -97,8 +97,9 @@ docker compose up
 
 ```bash
 # Clone the repository
-git clone https://github.com/viren/failureforge.git
+git clone https://github.com/Virenbhalgamiya/failureforge.git
 cd failureforge
+
 
 # Install dependencies
 pip install -r requirements.txt
